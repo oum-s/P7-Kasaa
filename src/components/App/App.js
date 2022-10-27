@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="kasa-app">
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
