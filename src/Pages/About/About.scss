@@ -1,3 +1,11 @@
-.kasa-banner-about{
-  background: url(../../assets/bannerAbout-img.png);
+@import '../../styles/style.scss';
+
+.kasa-about{
+  padding: 10px 90px;
+
+  &__banner{
+    width: 100%;
+    border-radius: 25px;
+    background: url(../../assets/bannerAbout-img.png);
+  }
 }
