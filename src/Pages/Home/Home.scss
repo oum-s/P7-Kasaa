@@ -1,0 +1,14 @@
+@import '../../styles/style.scss';
+
+.kasa-banner-home{
+  background: url(../../assets/banner-img.png);
+}
+.kasa-home{
+  background-color: $secondary;
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+

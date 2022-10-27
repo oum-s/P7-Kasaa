@@ -1,0 +1,29 @@
+@import '../../styles/style.scss';
+
+.kasa-404{
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    font-weight: 700;
+    font-size: 280px;
+    color: $primary;
+    margin: 0px;
+  }
+  h2{
+    font-weight: 500;
+    font-size: 35px;
+    color: $primary;
+    margin: 50px 0 0 0;
+  }
+  p{
+    font-size: 18px;
+    margin: 150px 0;
+    color: $primary;
+  }
+  a{
+    color: $primary;
+  }
+}
