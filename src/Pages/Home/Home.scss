@@ -1,14 +1,28 @@
 @import '../../styles/style.scss';
-
-.kasa-banner-home{
-  background: url(../../assets/banner-img.png);
-}
 .kasa-home{
-  background-color: $secondary;
-  border-radius: 25px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 10px 90px;
+
+  &__banner{
+    width: 100%;
+    border-radius: 25px;
+    background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.1), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(../../assets/banner-img.png);
+  }
+
+  &__container{
+      background-color: $secondary;
+      border-radius: 25px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
 }
+
+
 

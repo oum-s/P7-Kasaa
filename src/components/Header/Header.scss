@@ -1,34 +1,39 @@
 @import '../../styles/style.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-// *{
-//   @include base;
-// }
-nav {
-  display: flex;
+.kasa-header {
+    display: flex;
+    padding: 10px 100px;
+    justify-content: space-between;
+    font-size: 18px;
+
     .logo{
-      width: 150px;
+      width: 110px;
       padding: 13px;
       object-fit: cover;
     }
 
-    ul{
-      list-style: none;
+    nav{
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      margin: 0;
-      li{
-      text-align: center;
-      margin-left: 50px;
-      .active{
-      text-decoration: underline;
-      color: $primary;
-      }
-        .link{
-          text-decoration: none;
-          color: $primary;
-          
+      width: 210px;
+      ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        li{
+        text-align: center;
+        margin-left: 32px;
+        .active{
+        text-decoration: underline;
+        color: $primary;
+        }
+          .link{
+            text-decoration: none;
+            color: $primary;
+            
+          }
         }
       }
     }
