@@ -4,8 +4,10 @@
 // *{
 //   @include base;
 // }
-nav {
-  display: flex;
+.kasa-header {
+    display: flex;
+    padding: 10px 90px;
+
     .logo{
       width: 150px;
       padding: 13px;

@@ -1,7 +1,10 @@
+@import 'reset';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 body{
-  padding: 10px 50px;
+  /* padding: 10px 50px; */
+  padding: 0px;
+  margin: 0px;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }

@@ -9,9 +9,9 @@ import bannerImg from '../../assets/banner-img.png'
 function Home() {    
 
     return (
-        <div>
+        <div className='kasa-home'>
             <Banner bannerImg={bannerImg} />
-                <div className='kasa-home'>
+                <div className='kasa-home_container'>
                     <Link to="/property/:id">
                         <PropertyCard />
                     </Link>

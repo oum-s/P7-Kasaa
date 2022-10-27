@@ -1,9 +1,11 @@
 @import '../../styles/style.scss';
-
+.kasa-home{
+  padding: 10px 90px;
+}
 .kasa-banner-home{
   background: url(../../assets/banner-img.png);
 }
-.kasa-home{
+.kasa-home_container{
   background-color: $secondary;
   border-radius: 25px;
   padding: 20px;
