@@ -1,18 +1,22 @@
 import './DropDown.scss';
 import { Data } from './Data';
-import { AiOutlineDown } from 'react-icons/ai'
+import React, { useState } from "react";
 
 function DropDown({dropDownTitle, dropDownDescr}) {
+  // au click sur le header , la classe change en display normal
+  const [isActive, setActive] = useState("false");
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
   return <div className="kasa-DropDown">
               {Data.map((item, index) => {
                 return (
                   <div className='kasa-DropDown__item'>
-                    <div className='kasa-DropDown__item__header'>
+                    <div onClick={handleToggle}className='kasa-DropDown__item__header'>
+                      
                       <h2> {item.title} </h2>
-                      {/* <span><AiOutlineDown /></span> */}
-                      {/* <AiOutlineUp /> */}
                     </div>
-                    <div className='kasa-DropDown__item__description'>
+                    <div className={isActive ? "kasa-DropDown__item__description hide" : "kasa-DropDown__item__description show"}>
                       <p>{item.description}</p>
                     </div>
                   </div>

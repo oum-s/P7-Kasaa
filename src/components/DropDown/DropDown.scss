@@ -31,13 +31,13 @@
       position: relative;
 
       ::before {
-        content: '˅';
-        color: black;
+        content: "\276F";
+        color: white;
         position: absolute;
-        top: 50%;
+        top: 25%;
         right: 30px;
         font-size: 30px;
-        transform: translateY(-50%);
+        transform: rotate(90deg);
       }
     }
 
@@ -46,11 +46,20 @@
       padding: 25px 10px 14px 10px;
       color: $primary;
       line-height: 34.22px;
+      transition: 0.5s;
 
+      
       p{
         font-size: 25px;
       }
     }
+    .show{
+      display: block;
+    }
+    .hide{
+      display: none;
+    }
+    
   }
 
 }
