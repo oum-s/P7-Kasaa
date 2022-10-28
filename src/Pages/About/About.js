@@ -3,6 +3,7 @@ import DropDown from '../../components/DropDown/DropDown';
 import bannerImg from '../../assets/banner-img.png'
 import './About.scss';
 
+
 function About() {
     const bannerTitle = "";
     return (
