@@ -9,6 +9,7 @@
   width: 85%;
   max-width: 1000px;
   margin: 2rem auto;
+  padding-bottom: 5rem;
 
   &__item{
     background-color: $secondary;
@@ -21,7 +22,7 @@
       align-items: center;
       /* justify-content: space-between; */
       cursor: pointer;
-      font-size: 18px;
+      font-size: 25px;
       color: white;
       background-color: $primary;
       height: 35px;
@@ -51,7 +52,7 @@
 
       
       p{
-        font-size: 25px;
+        font-size: 23px;
       }
     }
     .show{
