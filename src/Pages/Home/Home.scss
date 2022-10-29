@@ -17,10 +17,15 @@
   &__container{
       background-color: $secondary;
       border-radius: 25px;
-      padding: 20px;
+      padding: 29px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      margin: auto;
+
+      @media screen and (min-width: 992px) {
+        flex-direction: column;
+    }
   }
 }
 

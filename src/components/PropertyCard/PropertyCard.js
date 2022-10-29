@@ -9,7 +9,9 @@ function PropertyCard() {
                               <div className='kasa-PropertyCard__cover'>
                               <img src={item.cover} alt='property-cover'></img>
                               </div>
-                              <h3> {item.title}</h3>
+                              <div className='kasa-PropertyCard__title'>
+                                <h3> {item.title}</h3>
+                              </div>
                           </div>
                         )
             })}
