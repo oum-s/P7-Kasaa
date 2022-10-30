@@ -3,8 +3,7 @@ import '../../components/Carousel/Carousel';
 // import { GrStar } from "react-icons/gr";
 // import Tag from '../../components/Tag/Tag';
 import Carousel from '../../components/Carousel/Carousel';
-// import Api from '../../api.json';
-
+// import Api from '../../Utils/api.json'
 function Property() {
   return <div className='kasa-Property__container'>
    {/*  {Api.map((item, index) => { */}

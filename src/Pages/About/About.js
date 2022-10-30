@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner/Banner';
-import DropDown from '../../components/DropDown/DropDown';
+import Section from '../../components/Section/Section';
 import bannerImg from '../../assets/banner-img.png'
 import './About.scss';
 
@@ -13,7 +13,7 @@ function About() {
                 <Banner bannerImg={bannerImg} bannerTitle={bannerTitle}/>
             </div>
             
-            <DropDown />
+            <Section />
         </div>
     )
 }

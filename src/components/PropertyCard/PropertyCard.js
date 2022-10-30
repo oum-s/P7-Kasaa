@@ -1,6 +1,6 @@
 import '../PropertyCard/PropertyCard';
 import './PropertyCard.scss';
-import Api from '../../api.json';
+import Api from '../../Utils/api.json';
 function PropertyCard() {
   return <div className='kasa-PropertyCard__container'>
             {Api.map((item, index) => {

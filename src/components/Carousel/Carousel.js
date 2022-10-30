@@ -1,6 +1,6 @@
 import '../Carousel/Carousel.scss';
 import CarouselImg from '../../assets/carouselBg.png'
-// import Api from '../../api.json';
+// import Api from '../../Utils/api.json'
 
 function Carousel() {
   return (
