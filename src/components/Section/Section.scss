@@ -1,29 +1,59 @@
-.accordion {
-  max-width: 600px;
+@import '../../styles/style.scss';
+
+.kasa-accordion {
+  /* max-width: 600px;
+  margin: 2rem auto; */
+  margin: 30px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 85%;
+  max-width: 1000px;
   margin: 2rem auto;
+  padding-bottom: 5rem;
+
+  &__item{
+    background-color: $secondary;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
 
   @media screen and (max-width: 700px) {
     width: 90%;
   }
-  .accordion-title {
+  &__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    background-color: #21aeca;
-    :hover {
-    background-color: #3ab4cc;
-    }
+    background-color: $primary;
+    font-size: 23px;
+    color: white;
+    height: 35px;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 5px;
   }
-  .accordion-title,
-  .accordion-content {
+  /* &__title, &__content {
     padding: 1rem;
-  }
+  } */
 
-  .accordion-content {
-    background-color: #39b9d2;
+  &__content {
+    border-radius: 5px;
+    padding: 25px 10px 14px 10px;
+    color: $primary;
+    line-height: 34.22px;
+    transition: 0.5s;
+    font-size: 21px;
   }
-
+  .icon{
+    color: white;
+    height: 2em;
+    width: 2em;
+  }
   
 }
 

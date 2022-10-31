@@ -4,15 +4,27 @@ import Accordion from '../../components/Accordion/Accordion';
 import { accordionData } from '../../Utils/contentAccordion';
 // import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
-function Section() {
-  
+// const Section = () => {
+//   return (
+//     <div>
+//       <div className="kasa-accordion">
+//         {accordionData.map(({ title, content }) => (
+//           <Accordion title={title} content={content} />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+function Section () {
   return (
-      <div className="accordion">
-        {accordionData.map(({data, index})=> (
-          <Accordion title={data.title} content={data.content} />
+    <div>
+      <div className="kasa-accordion">
+        {accordionData.map(({ title, content }) => (
+          <Accordion title={title} content={content} />
         ))}
       </div>
+    </div>
   );
-}
+};
 
 export default Section;

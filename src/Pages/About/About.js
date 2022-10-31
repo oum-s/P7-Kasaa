@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner/Banner';
 import Section from '../../components/Section/Section';
-import bannerImg from '../../assets/banner-img.png'
+import bannerImg from '../../assets/banner-img.png';
 import './About.scss';
 
 
