@@ -1,0 +1,67 @@
+@import '../../styles/style.scss';
+
+.kasa-DropDown{
+  margin: 30px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 85%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-bottom: 5rem;
+
+  &__item{
+    background-color: $secondary;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    &__header{
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+      cursor: pointer;
+      font-size: 25px;
+      color: white;
+      background-color: $primary;
+      height: 35px;
+      text-align: justify;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+
+      ::before {
+        content: "\276F";
+        color: white;
+        position: absolute;
+        top: 25%;
+        right: 30px;
+        font-size: 30px;
+        transform: rotate(90deg);
+        // transform: rotate(270deg);
+      }
+    }
+
+    &__description{
+      border-radius: 5px;
+      padding: 25px 10px 14px 10px;
+      color: $primary;
+      line-height: 34.22px;
+      transition: 0.5s;
+
+      
+      p{
+        font-size: 23px;
+      }
+    }
+    .show{
+      display: block;
+    }
+    .hide{
+      display: none;
+    }
+    
+  }
+
+}

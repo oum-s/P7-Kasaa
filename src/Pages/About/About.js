@@ -1,7 +1,8 @@
 import Banner from '../../components/Banner/Banner';
-import DropDown from '../../components/DropDown/DropDown';
-import bannerImg from '../../assets/banner-img.png'
+import Section from '../../components/Section/Section';
+import bannerImg from '../../assets/banner-img.png';
 import './About.scss';
+
 
 function About() {
     const bannerTitle = "";
@@ -12,7 +13,7 @@ function About() {
                 <Banner bannerImg={bannerImg} bannerTitle={bannerTitle}/>
             </div>
             
-            <DropDown />
+            <Section />
         </div>
     )
 }
