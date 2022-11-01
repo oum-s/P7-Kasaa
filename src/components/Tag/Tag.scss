@@ -1,17 +1,13 @@
 @import '../../styles/style.scss';
 
-.kasa-banner{
-  width: 100%;
-  height: 220px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-
-  h2{
+.kasa-Tag{
+  p{
+    width: 110px;
+    margin: 2rem 0;
+    background-color: $primary;
     color: white;
-    font-weight: 500;
-    font-size: 45px;
+    padding: 5px 20px;
+    margin: 10px;
+    border-radius: 10px;
   }
 }

@@ -19,8 +19,8 @@ function Home() {
                                 <Banner bannerImg={""} bannerTitle={bannerTitle}/>
                             </div>
                             <div className='kasa-home__container'>
-                                <Link to={`property/${index.id}`}>
-                                    <PropertyCard key={index.id}/>
+                                <Link to={`/property/${index.id}`}>
+                                    <PropertyCard />
                                 </Link>
                             </div>
                         </>

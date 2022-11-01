@@ -46,15 +46,7 @@
           flex-direction: row;
           justify-content: flex-start;
           margin-bottom: 2rem;
-          p{
-            width: 110px;
-            margin: 2rem 0;
-            background-color: $primary;
-            color: white;
-            padding: 5px 20px;
-            margin: 10px;
-            border-radius: 10px;
-          }
+          
         }
       }
 
@@ -76,21 +68,34 @@
           align-content: center;
           align-items: flex-start;
           justify-content: flex-end;
-          h3{
-            font-size: 23px;
-            font-weight: 500;
+          &__author{
+            width: 90px;
+            margin: 10px 15px;
+            h3{
+              font-size: 23px;
+              font-weight: 500;
+            }
           }
           &__img{
             width: 69px;
             height: 70px;
             border-radius: 32px;
             background-color: $secondary--darker;
+            overflow: hidden;
+            img{
+              max-width: 100%;
+              max-height: 100%;
+              display: block;
+            }
           }
         }
         &__notation{
           background-color: $secondary;
           display: flex;
           justify-content: flex-end;
+          #id{
+            color: $secondary--darker;
+          }
         }
       }
     }
@@ -99,9 +104,12 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
-      &__first, &__second{
-        background-color: $primary;
-        width: 50rem;
+      &__section{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
       }
   }
 }
