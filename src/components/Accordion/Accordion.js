@@ -1,6 +1,6 @@
 import React, { useState } from 'react' ;
 import '../../components/Section/Section.scss';
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 function Accordion ({title, content}) {
@@ -16,9 +16,9 @@ function Accordion ({title, content}) {
   );
 };
 
-// Accordion.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   content: PropTypes.string
-// }
+Accordion.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+}
 
 export default Accordion;

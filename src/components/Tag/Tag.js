@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
 import '../Tag/Tag';
 import '../Tag/Tag.scss';
-import Api from '../../Utils/api.json'
 
-function Tag(item) {
+function Tag({tags}) {
   return (
     <>
       {
-        Api.map((item) => {
+        tags.map((item, index) => {
           return (
-            <div className="kasa-Tag" key={item.id}>
-              <p>{item.tags}</p>
+            <div className="kasa-Tag" key={index} >
+              <p>{item}</p>
             </div>
           )
         })
@@ -19,9 +18,8 @@ function Tag(item) {
   );
 };
 
-
 Tag.protoTypes = {
-  TagTitle: PropTypes.string,
+  item: PropTypes.array.isRequired,
 }
 //syntaxe prévue dans l'ES6 qui nous épargnera d'utiliser les accolades au moment de l'import
 export default Tag

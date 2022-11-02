@@ -9,7 +9,7 @@ function AccordionProperty (item) {
   return (
     <div>
         {Api.map(({ item }) => (
-           <div className="kasa-accordion__item" key={item.id}>
+           <div className="kasa-accordion__item"  >
             <div className="kasa-accordion__title" onClick={() => setIsActive(!isActive)}>
               <h2>Description</h2>
 
