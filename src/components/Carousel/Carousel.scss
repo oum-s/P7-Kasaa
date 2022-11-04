@@ -2,20 +2,45 @@
 
 .kasa-Carousel{
   overflow: hidden;
-  width: 1240px;
-  height: 415px;
   width: 100%;
-  height: 220px;
+  height: 22rem;
   border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
+  position: relative;
 
-  img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-    }
+  &__content{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-Arrow, .right-Arrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 45px;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .left-Arrow{
+    right: 32px;
+  }
+  .right-Arrow{
+    left: 32px;
+  }
+
+  /* .numbers_container{
+    display: flex;
+    justify-content: center;
+  } */
+  .numbers{
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 20px;
+  }
 }
+

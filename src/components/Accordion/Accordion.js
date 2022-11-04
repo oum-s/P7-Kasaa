@@ -11,14 +11,18 @@ function Accordion ({title, content}) {
         <div>{title}</div>
         <div>{isActive ? <FiChevronDown className='icon'/> : <FiChevronUp className='icon'/> }</div>
       </div>
-      {isActive && <div className="kasa-accordion__content">{content}</div>}
+      {isActive && <div className="kasa-accordion__content">
+        <ul>
+          {content}
+        </ul>
+      </div>}
     </div>
   );
 };
 
 Accordion.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
+  content: PropTypes.array.isRequired
 }
 
 export default Accordion;

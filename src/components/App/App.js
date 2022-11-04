@@ -10,23 +10,23 @@ import Api from '../../Utils/api.json';
 
 
 function App() {
-  const pathname = window.location.pathname;
+ /*  const pathname = window.location.pathname;
   console.log(pathname);
-
-  function currentParams() {
+ */
+  /* function currentParams() {
     const params = pathname.split("/")[2];
     const id = Api.find((i) => i.id === params)
     console.log(params, id, Api.indexOf(id));
     return Api.indexOf(id);
   }
-
+ */
   return (
     <div className="kasa-app">
       <Header />
       <Routes>
         <Route path='/' element={<Home Api={Api}/>} />
         <Route path='/about' element={<About />} />
-        <Route path='/property/:id' element={<Property Api={Api[currentParams()]} />} /> 
+        <Route path='/property/:id' element={<Property Api={Api} />} /> 
         <Route path='/*' element={<NotFound />} /> 
       </Routes>
       <Footer />

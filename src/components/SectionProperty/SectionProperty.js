@@ -9,7 +9,7 @@ function SectionProperty ({description, equipments}) {
       <div className="kasa-SectionProperty" >
         <div className="kasa-accordionProperty"  >
           <Accordion title={"Description"} content={description} />
-          <Accordion title={"Équipements"} content={equipments} />
+          <Accordion title={"Équipements"} content={[equipments]} />
         </div>
       </div>
     </>

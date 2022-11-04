@@ -1,11 +1,37 @@
+import { useState } from 'react';
 import '../Carousel/Carousel.scss';
-import CarouselImg from '../../assets/carouselBg.png'
-// import Api from '../../Utils/api.json'
+// import CarouselImg from '../../assets/carouselBg.png'
 
-function Carousel() {
+function Carousel({slides}) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1 ;
+    setCurrentIndex(newIndex);
+  }
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ?  0 : currentIndex + 1 ;
+    setCurrentIndex(newIndex);
+  }
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
+
   return (
     <div className="kasa-Carousel">
-            <img src={CarouselImg} alt='Carousel-img'></img>
+      <div className='left-Arrow' onClick={goToPrevious}>❱</div>
+      <div className='right-Arrow' onClick={goToNext}>❰</div>
+        <div className="kasa-Carousel__content" style={{backgroundImage: `url(${slides[currentIndex]})`}}>
+          {slides.map((slide, slideIndex) => (
+            <div className='numbers' key={slideIndex} 
+              onClick={() => goToSlide(slideIndex)}> ● </div>
+          ) )}
+        </div>
     </div>
   );
 }
