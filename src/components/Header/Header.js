@@ -1,11 +1,14 @@
 import './Header.scss';
 import logo from '../../assets/logo.png';
-import { NavLink} from 'react-router-dom';
+import { NavLink, Link} from 'react-router-dom';
 
 function Header() {
   return (
     <header className="kasa-header">
-      <img className='logo' src={logo} alt='logo'></img>
+      <Link to={"/"}>
+        <img className='logo' src={logo} alt='logo'></img>
+      </Link>
+      
         <nav>
           <ul>
           <li>
