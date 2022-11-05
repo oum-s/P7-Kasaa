@@ -28,7 +28,6 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/property/:id' element={<Property Api={Api} />} /> 
         <Route path='/*' element={<NotFound />} /> 
-        <Route path='/NotFound' element={<NotFound />} /> 
       </Routes>
       <Footer />
     </div>
