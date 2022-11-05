@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
 import Banner from '../../components/Banner/Banner';
 import './Home.scss';
@@ -17,7 +17,9 @@ function Home({Api}) {
           {
             Api.map((item) => {
               return(   
-                <PropertyCard key={item.id} cover={item.cover} title={item.title}/>
+                <Link to={`/property/${item.id}`} key={item.id} >
+                    <PropertyCard cover={item.cover} title={item.title}/>
+                </Link>
               )
             }) 
           }

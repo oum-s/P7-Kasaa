@@ -19,7 +19,7 @@
 .kasa-accordion{
   &__item{
     background-color: $secondary;
-    width: 30rem;
+    width: 100%;
     margin-bottom: 30px;
     border-radius: 5px;
   }
@@ -41,9 +41,6 @@
     padding: 10px;
     border-radius: 5px;
   }
-  /* &__title, &__content {
-    padding: 1rem;
-  } */
 
   &__content {
     border-radius: 5px;
