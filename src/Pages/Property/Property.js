@@ -6,14 +6,16 @@ import '../../components/Carousel/Carousel';
 import SectionProperty from '../../components/SectionProperty/SectionProperty';
 import Tag from '../../components/Tag/Tag';
 import Carousel from '../../components/Carousel/Carousel';
-// import Api from '../../Utils/api.json'
 
 function Property({Api}) {
+  //declaration de l'id de l'url
   let { id } = useParams();
   let item ;
+  // fait le tour des infos de chaque appartement 
    for (let i = 0 ; i < Api.length; i++) {
+    // Si l'id de l'appartement correspond à l'id de l'api
     if  (Api[i].id === id) {
-      console.log(id)
+      console.log(id);
       item = Api[i];
         return (
           <div className='kasa-Property__container'>

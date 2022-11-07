@@ -5,16 +5,14 @@ import './About.scss';
 
 
 function About() {
-    const bannerTitle = "";
+  const bannerTitle = "";
     return (
-        <div className='kasa-about'>
-            {/* changer l'image de la banière */}
-            <div className='kasa-about__banner'>
-                <Banner bannerImg={bannerImg} bannerTitle={bannerTitle}/>
-            </div>
-            
-            <Section />
+      <div className='kasa-about'>
+        <div className='kasa-about__banner'>
+          <Banner bannerImg={bannerImg} bannerTitle={bannerTitle}/>
         </div>
+          <Section />
+      </div>
     )
 }
 
