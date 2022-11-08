@@ -1,13 +1,16 @@
 @import '../../styles/style.scss';
 
 .kasa-404{
-  padding: 10px 90px;
+  padding: 10px 80px;
   color: $primary;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px;
+  }
   h1{
     font-weight: 700;
     font-size: 280px;

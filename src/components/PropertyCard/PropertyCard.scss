@@ -16,10 +16,13 @@ a{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 5px auto;
+  margin: 15px auto;
 
   @media screen and (max-width: 992px) {
     width: 100%;
+  }
+  @media screen and (max-width: 414px) {
+    height: 18rem;
   }
   &__cover{
     height: 900px;
@@ -40,11 +43,13 @@ a{
   }
   &__title{
     margin: 10px;
-
+    height: 10rem;
+    max-height: 10rem;
       h3{
         text-decoration: none;
         color: white;
         font-size: 19px;
+        text-align: center;
         :hover{
           font-weight: bold;
         }

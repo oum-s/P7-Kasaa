@@ -1,8 +1,10 @@
 @import '../../styles/style.scss';
 
 .kasa-about{
-  padding: 10px 90px;
-
+  padding: 10px 80px;
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px;
+  }
   &__banner{
     width: 100%;
     border-radius: 25px;
