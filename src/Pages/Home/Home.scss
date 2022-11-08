@@ -1,7 +1,9 @@
 @import '../../styles/style.scss';
 .kasa-home{
-  padding: 10px 90px;
-
+  padding: 0px 80px 10px  80px;
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
   &__banner{
     width: 100%;
     border-radius: 25px;
@@ -12,6 +14,11 @@
           rgba(0, 0, 0, 0.5)
         ),
         url(../../assets/banner-img.png);
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 1421px) {
+        background-repeat: round;
+      } 
   }
 
   &__container{
@@ -19,13 +26,9 @@
       border-radius: 25px;
       padding: 29px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       margin: auto;
-
-      /* @media screen and (min-width: 992px) {
-        flex-direction: column;
-      } */
   }
 }
 

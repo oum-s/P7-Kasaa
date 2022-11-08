@@ -8,11 +8,19 @@
   justify-content: center;
   align-items: center;
   margin: 50px 0;
-
+  
+  @media screen and (max-width: 670px) {
+    margin: 10px 0;
+  }
   h2{
     color: white;
     font-weight: 500;
     font-size: 45px;
     text-align: center;
+
+    @media screen and (max-width: 670px) {
+      text-align: left;
+      padding: 1rem;
+    }
   }
 }

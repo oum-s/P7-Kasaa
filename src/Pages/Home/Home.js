@@ -11,10 +11,13 @@ function Home({Api}) {
     return (
       <div className='kasa-home'>
         <div className='kasa-home__banner'>
+            {/* Aucune bannière en props car l'img est en background pour pouvoir modifier l'effet sombre voulu dans la maquette */}
             <Banner bannerImg={""} bannerTitle={bannerTitle}/>
         </div>
+
         <div className='kasa-home__container'>
           {
+            // map pour pouvoir afficher chaque appartement
             Api.map((item) => {
               return(   
                 <Link to={`/property/${item.id}`} key={item.id} >
