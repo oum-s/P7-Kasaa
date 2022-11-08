@@ -3,11 +3,15 @@
 .kasa-about{
   padding: 10px 80px;
   @media screen and (max-width: 768px) {
-    padding: 10px 20px;
+    padding: 0px 20px;
   }
   &__banner{
     width: 100%;
     border-radius: 25px;
     background: url(../../assets/bannerAbout-img.png);
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1421px) {
+      background-repeat: round;
+    } 
   }
 }

@@ -9,7 +9,7 @@ function Accordion ({title, content}) {
     <div className="kasa-accordion__item">
       <div className="kasa-accordion__title" onClick={() => setIsActive(!isActive)}>
         <div>{title}</div>
-        <div>{isActive ? <FiChevronDown className='icon'/> : <FiChevronUp className='icon'/> }</div>
+        <div>{isActive ? <FiChevronUp className='icon'/> : <FiChevronDown className='icon'/> }</div>
       </div>
       {isActive && <div className="kasa-accordion__content">
         <ul>
