@@ -24,13 +24,13 @@ function Carousel({slides}) {
 
   return (
     <div className="kasa-Carousel">
-      <div className='left-Arrow' onClick={goToPrevious}>❱</div>
-      <div className='right-Arrow' onClick={goToNext}>❰</div>
+      <div className='left-Arrow' onClick={goToPrevious}>❰</div>
+      <div className='right-Arrow' onClick={goToNext}>❱</div>
         <div className="kasa-Carousel__content" style={{backgroundImage: `url(${slides[currentIndex]})`}}>
-          {slides.map((slide, slideIndex) => (
-            <div className='numbers' key={slideIndex} 
-              onClick={() => goToSlide(slideIndex)}> ● </div>
-          ) )}
+          <div className='numbers'>
+          {currentIndex+1} / { slides.length }
+          </div>
+
         </div>
     </div>
   );
