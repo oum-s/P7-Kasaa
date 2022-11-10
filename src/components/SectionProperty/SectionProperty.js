@@ -12,7 +12,14 @@ function SectionProperty ({description, equipments}) {
     },
     {
       title: "Equipements",
-      content: equipments
+      content: 
+        equipments.map((element, index) => {
+          return(
+            <ul key={ index }>
+              { <li> {element} </li>}
+            </ul>
+          )
+        })
     },
   ];
 

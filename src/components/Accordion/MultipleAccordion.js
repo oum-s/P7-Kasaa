@@ -22,14 +22,8 @@ function MultipleAccordion ({data, defaultSection}) {
                     </div>
 
                     { activeEntry === item.title &&
-                    <div className="kasa-accordion__content" >
-                        {item.content && item.content.map( element => {
-                          return(
-                            <ul key={ item.id }>
-                              { <li> {element} </li>}
-                            </ul>
-                          )
-                        })}
+                    <div className="kasa-accordion__content" key={item.content} >
+                      {item.content}
                     </div>
                     }
                 </div>

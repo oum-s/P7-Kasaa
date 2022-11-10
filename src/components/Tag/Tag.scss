@@ -1,9 +1,10 @@
 @import '../../styles/style.scss';
 
 .kasa-Tag{
-  min-width: 110px;
+  min-width: 165px;
   max-height: 30px;
   margin: 2rem 1em 2rem 0;
+  text-align: center;
   p{
     font-size: 19px;
     background-color: $primary;
