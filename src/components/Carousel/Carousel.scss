@@ -38,8 +38,11 @@
     justify-content: center;
   } */
   .numbers{
-    margin: 0 3px;
+    margin: 18px 3px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
   }
 }

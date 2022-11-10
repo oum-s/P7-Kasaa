@@ -1,15 +1,26 @@
 import PropTypes from "prop-types";
 import React from "react";
 import './SectionProperty.scss';
-import Accordion from '../Accordion/Accordion';
+// import Accordion from '../Accordion/Accordion';
+import MultipleAccordion from '../Accordion/MultipleAccordion';
 
 function SectionProperty ({description, equipments}) {
+  let data = [
+    {
+      title: "Description",
+      content: description
+    },
+    {
+      title: "Equipements",
+      content: equipments
+    },
+  ];
+
   return (
     <>
       <div className="kasa-SectionProperty" >
         <div className="kasa-accordionProperty"  >
-          <Accordion title={"Description"} content={description} />
-          <Accordion title={"Équipements"} content={[equipments]} />
+          <MultipleAccordion data={data} defaultSection="Description"></MultipleAccordion>
         </div>
       </div>
     </>

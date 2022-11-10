@@ -22,7 +22,7 @@ function Accordion ({title, content}) {
       {/* quaad isActive est true on affiche le contenue */}
       {isActive && <div className="kasa-accordion__content">
         <ul>
-          {content}
+          <li>{content}</li>
         </ul>
       </div>}
     </div>
