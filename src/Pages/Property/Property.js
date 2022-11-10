@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams, Navigate } from "react-router-dom";
-import { GrStar } from "react-icons/gr";
+// import { GrStar } from "react-icons/gr";
 import './Property.scss';
 import '../../components/Carousel/Carousel';
 import SectionProperty from '../../components/SectionProperty/SectionProperty';
+import Rate from '../../components/Rate/Rate';
 import Tag from '../../components/Tag/Tag';
 import Carousel from '../../components/Carousel/Carousel';
-import { checkPropTypes } from 'prop-types';
-// import Api from '../../Utils/api.json'
+// import { checkPropTypes } from 'prop-types';
 
 function Property({Api}) {
   // récupérer l'id de l'url
@@ -66,14 +66,8 @@ function Property({Api}) {
                     </div>
 
                     <div className='kasa-Property__header__second__notation'  >
-                        <span>
-                        {/* ajouter le rating, si le rating est 4 mettre 4 stars */}
-                            < GrStar size={30}/>
-                            < GrStar size={30}/>
-                            < GrStar size={30}/>
-                            < GrStar size={30}/>
-                            <GrStar size={30} color='#C4C4C4'/>
-                        </span>
+                        <Rate 
+                        rating={item.rating} />
                     </div>
 
                 </div>
