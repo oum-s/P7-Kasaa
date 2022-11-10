@@ -1,17 +1,28 @@
 import React from "react";
-import './Section.scss';
-import Accordion from '../../components/Accordion/Accordion';
+// import './Section.scss';
+import '../../Pages/About/About.scss'
+// import Accordion from '../../components/Accordion/Accordion';
 import { accordionData } from '../../Utils/contentAccordion';
+import MultipleAccordion from '../Accordion/MultipleAccordion';
 
-function Section () {
+function Section ({title, content}) {
+  // déclare un tableau qui sera réutilisé dans l'accordéon
+  /* let data = [
+    {
+      title: "Title",
+      content: title
+    },
+    {
+      title: "Content",
+      content: content
+    },
+  ] */
   return (
-    <div>
-      <div className="kasa-accordion">
-        {accordionData.map(({ title, content }) => (
-          <Accordion key={Accordion} title={title} content={[content]} />
-        ))}
+    <div className="kasa-Section__about" >
+        <div className="kasa-Section__accordion"  >
+          <MultipleAccordion data={accordionData} defaultSection="Fiabilité"></MultipleAccordion>
+        </div>
       </div>
-    </div>
   );
 };
 

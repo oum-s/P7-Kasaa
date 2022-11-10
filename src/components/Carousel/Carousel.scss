@@ -21,22 +21,26 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    font-size: 45px;
-    color: white;
     z-index: 1;
     cursor: pointer;
   }
+  .arrowStyle{
+    font-size: 80px;
+    color: white;
+    @media screen and (max-width: 510px) {
+      font-size: 60px;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 40px;
+    }
+  }
   .left-Arrow{
-    left: 32px;
+    left: 0px;
   }
   .right-Arrow{
-    right: 32px;
+    right: 0px;
   }
 
-  /* .numbers_container{
-    display: flex;
-    justify-content: center;
-  } */
   .numbers{
     margin: 18px 3px;
     cursor: pointer;

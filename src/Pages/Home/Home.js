@@ -4,8 +4,6 @@ import PropertyCard from '../../components/PropertyCard/PropertyCard';
 import Banner from '../../components/Banner/Banner';
 import './Home.scss';
 
-
-
 function Home({Api}) {   
   const bannerTitle = "Chez vous, partout et ailleurs";
     return (

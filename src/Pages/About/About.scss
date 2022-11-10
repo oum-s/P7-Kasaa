@@ -14,4 +14,58 @@
       background-repeat: round;
     } 
   }
+
+  .kasa-Section__accordion {
+    margin: 30px 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+    margin: 2rem auto;
+    padding-bottom: 5rem;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    } 
+  }
+
+  .kasa-accordion{
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      font-size: 23px;
+      color: white;
+      text-align: justify;
+      padding: 10px;
+      border-radius: 5px;
+      min-height: 0px;
+    }
+
+    &__item{
+      background-color: $secondary;
+      width: 100%;
+      margin-bottom: 30px;
+      border-radius: 5px;
+    }
+    @media screen and (max-width: 700px) {
+      width: 90%;
+    }
+  
+    &__content {
+      border-radius: 5px;
+      padding: 25px 10px 14px 10px;
+      color: $primary;
+      line-height: 34.22px;
+      transition: 0.5s;
+      font-size: 21px;
+      
+    }
+    .icon{
+      color: white;
+      height: 2em;
+      width: 2em;
+    }
+  }
 }

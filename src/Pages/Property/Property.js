@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams, Navigate } from "react-router-dom";
-// import { GrStar } from "react-icons/gr";
 import './Property.scss';
 import '../../components/Carousel/Carousel';
 import SectionProperty from '../../components/SectionProperty/SectionProperty';
+// import SectionProperty from '../../components/SectionProperty/SectionProperty.scss';
 import Rate from '../../components/Rate/Rate';
 import Tag from '../../components/Tag/Tag';
 import Carousel from '../../components/Carousel/Carousel';

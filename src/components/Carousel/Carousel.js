@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../Carousel/Carousel.scss';
+import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi";
 // import CarouselImg from '../../assets/carouselBg.png'
 
 function Carousel({slides}) {
@@ -27,8 +28,15 @@ function Carousel({slides}) {
 
   return (
     <div className="kasa-Carousel">
-      <div className='left-Arrow' onClick={goToPrevious}>❰</div>
-      <div className='right-Arrow' onClick={goToNext}>❱</div>
+      <div className='left-Arrow' onClick={goToPrevious}>
+        <HiOutlineChevronLeft 
+        className='arrowStyle'/>
+      </div>
+      <div className='right-Arrow' onClick={goToNext}>
+        <HiOutlineChevronRight 
+        className='arrowStyle' />
+      </div>
+        
         <div className="kasa-Carousel__content" style={{backgroundImage: `url(${slides[currentIndex]})`}}>
           <div className='numbers'>
           {currentIndex+1} / { slides.length }
