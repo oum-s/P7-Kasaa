@@ -26,6 +26,7 @@ function Carousel({slides}) {
 
   return (
     <div className="kasa-Carousel">
+<<<<<<< HEAD
       {/* au click aller à l'image précedente */}
       <div className='left-Arrow' onClick={goToPrevious}>
 
@@ -46,6 +47,12 @@ function Carousel({slides}) {
          style={{backgroundImage: `url(${slides[currentIndex]})`}}>
           <div className='numbers'>
             {/* compteur */}
+=======
+      <div className='left-Arrow' onClick={goToPrevious}>❰</div>
+      <div className='right-Arrow' onClick={goToNext}>❱</div>
+        <div className="kasa-Carousel__content" style={{backgroundImage: `url(${slides[currentIndex]})`}}>
+          <div className='numbers'>
+>>>>>>> bd5c6b4a78ed27bc633750c7ae3771576125f912
           {currentIndex+1} / { slides.length }
           </div>
 
