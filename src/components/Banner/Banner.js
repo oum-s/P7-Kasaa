@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import '../Banner/Banner';
-import '../Banner/Banner.scss'
+import '../Banner/Banner.scss';
+
+
 function Banner({ bannerTitle}) {
   return <div className="kasa-banner" key={bannerTitle}>
             <h2>{bannerTitle}</h2>

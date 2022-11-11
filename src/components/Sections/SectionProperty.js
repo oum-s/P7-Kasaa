@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
-import './SectionProperty.scss';
 import Accordion from '../Accordion/Accordion';
-import MultipleAccordion from '../Accordion/MultipleAccordion';
 
 function SectionProperty ({description, equipments}) {
+  // utiliser un tableau qui regroupera toutes les descriptions et equipments du fichier JSON lorsque la props sera transmis dans le composant accordeon puis la page Property
   let data = [
     {
       title: "Description",
@@ -12,7 +11,14 @@ function SectionProperty ({description, equipments}) {
     },
     {
       title: "Equipements",
-      content: equipments
+      content: 
+        equipments.map((element, index) => {
+          return(
+            <ul key={ index }>
+              { <li> {element} </li>}
+            </ul>
+          )
+        })
     },
   ];
 
@@ -20,7 +26,7 @@ function SectionProperty ({description, equipments}) {
     <>
       <div className="kasa-SectionProperty" >
         <div className="kasa-accordionProperty"  >
-          <MultipleAccordion data={data} defaultSection="Description"></MultipleAccordion>
+          <Accordion key={data} data={data} defaultSection="Description"></Accordion>
         </div>
       </div>
     </>

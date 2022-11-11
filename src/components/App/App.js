@@ -1,4 +1,5 @@
-import { Routes, Route, useParams} from 'react-router-dom';
+import PropTypes from "prop-types";
+import { Routes, Route} from 'react-router-dom';
 import Header from '../Header/Header';
 import Home from '../../Pages/Home/Home';
 import NotFound from '../../Pages/NotFound/NotFound';
@@ -10,40 +11,25 @@ import Api from '../../Utils/api.json';
 
 
 function App() {
-  let { id } = useParams();
-  //foreach de tous les id de l'Api
-  /* let foundItem = Api.forEach(element => {
-    return element.id;
-  }); */
-  /* let sameItem = Api.find(x => x.id === id );
-  console.log(sameItem) */
-
-  // si l'id de tous les api correspond pas à l'id de l'url c'est vrai
-  /* let sameItem = foundItem !== id; */
-  
   return (
     <div className="kasa-app">
       <Header />
       <Routes>
+        {/* On récupère l'Api dans les pages correspondantes */}
         <Route path='/' element={<Home Api={Api}/>} />
+        <Route path='/home' element={<Home Api={Api}/>} />
         <Route path='/about' element={<About />} />
-        {/* <Route path={`/property/${item.id}`} element={<Property Api={Api} />} />  */}
         <Route path='/property/:id' element={<Property Api={Api} />} /> 
         <Route path='/*' element={<NotFound />} /> 
         <Route path='/NotFound' element={<NotFound />} />
-        {/* <Route path='/property/:id' element={<NotFound />} /> */}
-        {/* <Route
-          exact path="/property/"
-          element={
-            sameItem && (
-              <NotFound />
-            ) 
-          }
-        /> */}
       </Routes>
       <Footer />
     </div>
   );
+}
+
+App.protoTypes = {
+  Api: PropTypes.array.isRequired
 }
 
 export default App;

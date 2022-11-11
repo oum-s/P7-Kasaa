@@ -52,16 +52,17 @@
         }
         @media screen and (max-width: 410px) {
           margin-left: 1em;
-        } 
-        .active{
-        text-decoration: underline;
-        color: $primary;
         }
-          .link{
-            text-decoration: none;
-            color: $primary;
-            
+        a{
+          color: $primary;
+        }
+        .active{
+          text-decoration: underline;
           }
+            .link{
+              text-decoration: none;
+              
+            } 
         }
       }
     }

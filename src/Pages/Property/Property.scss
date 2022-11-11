@@ -2,8 +2,8 @@
 
 .kasa-Property__container{
   margin: 10px 80px;
-  @media screen and (max-width: 768px) {
-    padding: 10px 20px;
+  @media screen and (max-width: 995px) {
+    margin: 10px 20px;
   }
 }
 .kasa-Property{
@@ -20,73 +20,134 @@
       flex-direction: row;
       justify-content: space-between;
       margin-top: 3rem;
-      margin-bottom: 3rem;
+      margin-bottom: 1em;
       color: $primary;
 
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 995px) {
         flex-direction: column;
+        margin-bottom: 0px;
       }
       
       &__first, &__second{
-        height: 8rem;
         width: 100%;
+        min-height: 13rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        @media screen and (max-width: 995px) {
+          min-height: fit-content;
+        }
+      }
+      &__first__tag, &__second__notation{
+        min-height: 6em;
+        align-items: center;
       }
       &__first{
-        @media screen and (max-width: 992px){
+        @media screen and (max-width: 995px){
           flex-direction: column;
           width: 100%;
+          margin-bottom: 25px;
         }
-        h1{
-          font-weight: 500;
-          font-size: 35px;
-        }
-        p{
-          font-weight: 500;
-          margin: 15px 0 30px 0;
-          font-size: 18px;
+        &__title{
+          min-height: 6em;
+          width: 100%;
+          @media screen and (max-width: 995px){
+            min-height: fit-content;
+          }
+          @media screen and (max-width: 560px){
+            margin-bottom: 10px;
+          }
+          h1{
+            font-weight: 500;
+            font-size: 35px;
+            @media screen and (max-width: 375px){
+              font-size: 25px;
+              }
+          }
+          p{
+            font-weight: 500;
+            margin: 15px 0 30px 0;
+            font-size: 18px;
+
+            @media screen and (max-width: 995px){
+              margin: 15px 0 0 0;
+            }
+            @media screen and (max-width: 510px){
+              font-size: 15px;
+              }
+          }
         }
 
         &__tag{
+          width: 100%;
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
-          margin-bottom: 2rem;
           
+          @media screen and (max-width: 510px){
+            flex-wrap: wrap;
+            align-content: center;
+          }
         }
       }
 
       &__second{
-        
-        @media screen and (max-width: 992px){
+        @media screen and (max-width: 995px){
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        height: 100px;
+        min-height: fit-content;
+        align-content: flex-start;
+        align-items: flex-start;
         }
-        
+        @media screen and (max-width: 420px){
+        align-items: center;
+        margin-bottom: 2em;
+        }
     
         &__profil{
-          height: 8rem;
+          min-height: 8em;
           display: flex;
           flex-direction:row;
           align-content: center;
           align-items: flex-start;
           justify-content: flex-end;
+          @media screen and (max-width: 560px){
+            min-height: fit-content;
+          }
           &__author{
-            width: 90px;
-            margin: 10px 15px;
+            width: 7em;
+            margin: 10px 0;
+            min-width: 4em;
+            @media screen and (max-width: 560px){
+              width: 5em;
+            }
             h3{
               font-size: 23px;
               font-weight: 500;
+              @media screen and (max-width: 560px){
+                font-size: 18px;
+              }
             }
           }
           &__img{
-            width: 69px;
-            height: 70px;
-            border-radius: 32px;
+            width: 84px;
+            height: 82px;
+            border-radius: 51px;
             background-color: $secondary--darker;
             overflow: hidden;
+            @media screen and (max-width: 560px){
+            width: 78px;
+            height: 78px;
+            border-radius: 50px;
+            }
+            @media screen and (max-width: 375px){
+              width: 53px;
+              height: 53px;
+              border-radius: 50px;
+              }
             img{
               max-width: 100%;
               max-height: 100%;
@@ -95,11 +156,10 @@
           }
         }
         &__notation{
-          background-color: $secondary;
           display: flex;
           justify-content: flex-end;
-          #id{
-            color: $secondary--darker;
+          @media screen and (max-width: 375px){
+            min-height: fit-content;
           }
         }
       }
@@ -107,14 +167,19 @@
 
     &__details{
       display: flex;
-      justify-content: space-between;
       margin-bottom: 15px;
+      min-height: 30em;
+      width: 100%;
       &__section{
         width: 100%;
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 15px;
-        flex-wrap: wrap;
       }
+  }
+}
+
+.iconStar{
+  font-size: 30px;
+  @media screen and (max-width: 375px){
+  font-size: 20px;
   }
 }

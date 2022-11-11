@@ -7,10 +7,14 @@ function PropertyCard({cover, title}) {
     <div className='kasa-PropertyCard__container'>
       <div className="kasa-PropertyCard">
         <div className='kasa-PropertyCard__cover'  >
-          <img key={PropertyCard} src={cover} alt='property-cover'></img>
+        {/*props pour pouvoir attribuer n'importe quel cover ou title  */}
+          <img key={cover} src={cover} alt='property-cover'></img>
+
         </div>
         <div className='kasa-PropertyCard__title'  >
-          <h3 key={PropertyCard}> {title}</h3>
+
+          <h3 key={title}> {title}</h3>
+
         </div>
       </div>
     </div>)

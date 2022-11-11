@@ -1,8 +1,5 @@
 @import '../../styles/style.scss';
-
 .kasa-accordion {
-  /* max-width: 600px;
-  margin: 2rem auto; */
   margin: 30px 110px;
   display: flex;
   align-items: center;
@@ -15,16 +12,30 @@
     width: 100%;
   } 
 
-  &__item{
-    background-color: $secondary;
+  &__container{
     width: 100%;
     margin-bottom: 30px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 30em;
+    @media screen and (max-width: 510px){
+      flex-direction: column;
+      justify-content: space-around;
+    }
   }
-
   @media screen and (max-width: 700px) {
     width: 90%;
   }
+
+  &__item{
+    width: 45%;
+    @media screen and (max-width: 510px) {
+      width: 100%;
+    } 
+  }
+
   &__title {
     display: flex;
     flex-direction: row;
@@ -41,6 +52,7 @@
   }
 
   &__content {
+    background-color: $secondary;
     border-radius: 5px;
     padding: 25px 10px 14px 10px;
     color: $primary;
