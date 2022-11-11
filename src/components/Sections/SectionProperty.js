@@ -21,12 +21,32 @@ function SectionProperty ({description, equipments}) {
         })
     },
   ];
+  let dataDescrription = [
+    {
+      title: "Description",
+      content: description
+    }    
+  ];
+  let dataEquipement = [   
+    {
+      title: "Equipements",
+      content: 
+        equipments.map((element, index) => {
+          return(
+            <ul key={ index }>
+              { <li> {element} </li>}
+            </ul>
+          )
+        })
+    }
+  ];
 
   return (
     <>
       <div className="kasa-SectionProperty" >
         <div className="kasa-accordionProperty"  >
-          <Accordion key={data} data={data} defaultSection="Description"></Accordion>
+          <Accordion data={dataDescrription} defaultSection="Description"></Accordion>
+          <Accordion data={dataEquipement} defaultSection="Equipements"></Accordion>
         </div>
       </div>
     </>
