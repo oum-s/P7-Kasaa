@@ -5,12 +5,11 @@ import Banner from '../../components/Banner/Banner';
 import './Home.scss';
 
 function Home({Api}) {   
-  const bannerTitle = "Chez vous, partout et ailleurs";
+  // déclaration du titre présent dans Home mais pas About
     return (
       <div className='kasa-home'>
         <div className='kasa-home__banner'>
-            {/* Aucune bannière en props car l'img est en background pour pouvoir modifier l'effet sombre voulu dans la maquette */}
-            <Banner bannerImg={""} bannerTitle={bannerTitle}/>
+            <Banner bannerTitle={"Chez vous, partout et ailleurs"}/>
         </div>
 
         <div className='kasa-home__container'>
@@ -19,7 +18,9 @@ function Home({Api}) {
             Api.map((item) => {
               return(   
                 <Link to={`/property/${item.id}`} key={item.id} >
+
                     <PropertyCard cover={item.cover} title={item.title}/>
+                    
                 </Link>
               )
             }) 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import PropTypes from "prop-types";
 import '../Carousel/Carousel.scss';
 import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi";
-// import CarouselImg from '../../assets/carouselBg.png'
 
 function Carousel({slides}) {
   // état / state
@@ -9,9 +9,11 @@ function Carousel({slides}) {
 
   // fonction pour faire un retour
   const goToPrevious = () => {
+    // déclarer la premier image et image par défault comme étant la firstSlide
     const isFirstSlide = currentIndex === 0;
-    // variable qui précise que si l'image affiché est la première image 
+    // si on est à la première image on va à la dernière image sinon à l'image précedente
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1 ;
+    // met à jour l'état
     setCurrentIndex(newIndex);
   }
   // fonction pour aller à la photo suivante
@@ -21,30 +23,39 @@ function Carousel({slides}) {
     setCurrentIndex(newIndex);
   }
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
 
   return (
     <div className="kasa-Carousel">
+      {/* au click aller à l'image précedente */}
       <div className='left-Arrow' onClick={goToPrevious}>
+
         <HiOutlineChevronLeft 
         className='arrowStyle'/>
+
       </div>
+      {/* au click aller à l'image suivante */}
       <div className='right-Arrow' onClick={goToNext}>
+
         <HiOutlineChevronRight 
         className='arrowStyle' />
+
       </div>
         
-        <div className="kasa-Carousel__content" style={{backgroundImage: `url(${slides[currentIndex]})`}}>
+        <div className="kasa-Carousel__content"
+        // insérer la props slides ainsi que l'image current
+         style={{backgroundImage: `url(${slides[currentIndex]})`}}>
           <div className='numbers'>
+            {/* compteur */}
           {currentIndex+1} / { slides.length }
           </div>
 
         </div>
     </div>
   );
+}
+
+Carousel.protoTypes = {
+  slides: PropTypes.element.isRequired
 }
 //syntaxe prévue dans l'ES6 qui nous épargnera d'utiliser les accolades au moment de l'import
 export default Carousel

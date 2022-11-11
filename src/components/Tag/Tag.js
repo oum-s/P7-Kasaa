@@ -6,6 +6,7 @@ function Tag({tags}) {
   return (
     <>
       {
+        // map des tags car c'est un tableau
         tags.map((item, index) => {
           return (
             <div className="kasa-Tag" key={index} >
@@ -19,7 +20,8 @@ function Tag({tags}) {
 };
 
 Tag.protoTypes = {
-  item: PropTypes.array.isRequired,
+  item: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired
 }
 //syntaxe prévue dans l'ES6 qui nous épargnera d'utiliser les accolades au moment de l'import
 export default Tag

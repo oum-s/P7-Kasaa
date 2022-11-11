@@ -1,17 +1,20 @@
 import Banner from '../../components/Banner/Banner';
-import Section from '../../components/Section/Section';
-import bannerImg from '../../assets/banner-img.png';
+import Section from '../../components/Sections/Section';
 import './About.scss';
 
 
 function About() {
-  const bannerTitle = "";
+  
     return (
       <div className='kasa-about'>
         <div className='kasa-about__banner'>
-          <Banner bannerImg={bannerImg} bannerTitle={bannerTitle}/>
+          {/* pas de titre de bannière mais pas d'erreurs car notRequired */}
+          <Banner />
+
         </div>
+
           <Section />
+
       </div>
     )
 }
