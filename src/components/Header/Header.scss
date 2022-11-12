@@ -2,49 +2,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 .kasa-header {
-    display: flex;
-    padding: 10px 80px;
-    justify-content: space-between;
-    font-weight: 500;
-    @media screen and (max-width: 768px) {
-      padding: 10px 20px;
+  display: flex;
+  padding: 10px 80px;
+  justify-content: space-between;
+  font-weight: 500;
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px;
+  }
+  
+  .logo{
+    width: 13em;
+    padding: 13px;
+    object-fit: cover;
+    @media screen and (max-width: 507px) {
+      width: 10em;
+    } 
+    @media screen and (max-width: 390px) {
+      width: 9em;
+    } 
+    @media screen and (max-width: 375px) {
+      width: 7em;
     }
-    .logo{
-      width: 13em;
-      padding: 13px;
-      object-fit: cover;
-      @media screen and (max-width: 507px) {
-        width: 10em;
-      } 
-      @media screen and (max-width: 390px) {
-        width: 9em;
-      } 
-      @media screen and (max-width: 375px) {
-        width: 7em;
-      }
-    }
+  }
 
-    nav{
+  nav{
+    display: flex;
+    width: 17em;
+    font-size: 24px;
+    @media screen and (max-width: 556px) {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    @media screen and (max-width: 507px) {
+      font-size: 16px;
+    } 
+    @media screen and (max-width: 415px) {
+      font-size: 13px;
+    }
+    ul {
+      list-style: none;
       display: flex;
-      width: 17em;
-      font-size: 24px;
-      @media screen and (max-width: 556px) {
-         font-size: 18px;
-        text-transform: uppercase;
-      }
-      @media screen and (max-width: 507px) {
-        font-size: 16px;
-      } 
-      @media screen and (max-width: 415px) {
-        font-size: 13px;
-      }
-      ul{
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 0;
-        li{
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0;
+      li {        
         text-align: center;
         margin-left: 2.5em;
         @media screen and (max-width: 670px) {
@@ -53,19 +54,16 @@
         @media screen and (max-width: 410px) {
           margin-left: 1em;
         }
-        a{
+        a {
           color: $primary;
+          text-decoration: none;
         }
-        .active{
-          text-decoration: underline;
-          }
-            .link{
-              text-decoration: none;
-              
-            } 
-        }
+        a:hover {
+          text-decoration: underline
+        }  
       }
     }
+  }
 
     
     img, ul {

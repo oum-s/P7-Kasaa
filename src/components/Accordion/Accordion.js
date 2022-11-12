@@ -7,9 +7,13 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 function Accordion ({data, defaultSection}) {
   // state / état
   const [activeEntry, setActiveEntry] = useState(defaultSection);
-
+ 
   const clickAccordion = entry => {
-    setActiveEntry(entry)
+    if (entry == activeEntry) {
+      setActiveEntry('')      
+    } else {
+      setActiveEntry(entry)  
+    }
   };
   // affichage
   return (
@@ -17,21 +21,20 @@ function Accordion ({data, defaultSection}) {
         {
         data.map((item, index) => {
             return(
-                <div className='kasa-accordion__item'>
-                    <div className="kasa-accordion__title" onClick={() => clickAccordion(item.title)} key={item.title}>
-
-                        <div key={index.title}>
+                <div key={item.title} className='kasa-accordion__item'>
+                    <div className="kasa-accordion__title" onClick={() => clickAccordion(item.title)}>
+                        <div>
                           {item.title}
                         </div>
                         {/* si c'est l'élément par défaut qui est ouvert afficher le FiChevronUp sinon afficher l'autre */}
-                        <div key={`chevron-${index.id}`}>
+                        <div>
                           {activeEntry === item.title ? <FiChevronUp className='icon'/> : <FiChevronDown className='icon'/> }
                         </div>
 
                     </div>
                     {/* si le titre du contenant est actif, afficher le contenant */}
                     { activeEntry === item.title &&
-                      <div className="kasa-accordion__content" key={index.content} >
+                      <div className="kasa-accordion__content">
                         {item.content}
                       </div>
                     }
